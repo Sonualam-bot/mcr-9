@@ -10,6 +10,11 @@
   cursor: pointer;
 }
 
+.navlink {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
 .categorySpecial > img {
   object-fit: cover;
 }

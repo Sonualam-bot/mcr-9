@@ -16,7 +16,7 @@ export const Homepage = () => {
                         const { _id, thumbnail, category } = video
                         return (
                             <li key={_id} className="categorySpecial" >
-                                <NavLink to={`/catVideoList/${_id} `}  >
+                                <NavLink to={`/catVideoList/${_id} `} className="navlink" >
                                     <img src={thumbnail} alt="thumbnail" />
                                     <h3>{category}</h3>
                                 </NavLink>
