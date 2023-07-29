@@ -1,0 +1,54 @@
+.selectedCategoryVideos h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.selectedCategoryVideos {
+  width: 320px;
+  position: relative;
+}
+.selectedCategoryVideos img {
+  width: 100%;
+}
+
+.svg {
+  position: absolute;
+  right: 0;
+  padding: 3px;
+  font-size: 1.7rem;
+  border: 1px solid #fff;
+  background-color: antiquewhite;
+  color: var(--primary-color);
+  border-radius: 0 0 0 13px;
+}
+
+.videoDetails {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  gap: 1rem;
+}
+
+.videoDetails > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.createrDetails {
+  display: flex;
+  color: var(--teritay-color);
+  gap: 0.3rem;
+}
+
+.createrDetails p:nth-child(1) {
+  border-right: 1px solid var(--teritay-color);
+  padding-right: 5px;
+}
+
+.detailsSpecial {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

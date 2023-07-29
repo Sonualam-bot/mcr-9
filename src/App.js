@@ -23,7 +23,7 @@ function App() {
           <Route path="/explore" element={<ExplorePage />} />
           <Route path="playlists" element={<Playlists />} />
           <Route path="/watchlater" element={<WatchLater />} />
-          <Route path="/catVideoList/:catId" element={<CategoryWiseVideoList />} />
+          <Route path="/catVideoList/:selectedCategory" element={<CategoryWiseVideoList />} />
 
         </Routes>
 

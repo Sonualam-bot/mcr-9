@@ -1,14 +1,13 @@
 .App {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  /* width: 100vw;
-  box-sizing: border-box; */
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  margin: 0 5rem;
 }
 
 :root {
   --primary-color: #50b7f5;
   --secondary-color: black;
+  --teritay-color: grey;
 }
 
 .mid-section {
