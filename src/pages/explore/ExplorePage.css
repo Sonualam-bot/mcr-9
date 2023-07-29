@@ -1,0 +1,21 @@
+.explorePage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+}
+
+.searchDiv {
+  margin-bottom: 0.5rem;
+}
+
+.searchDiv input {
+  width: 94%;
+  padding: 0.65rem;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  text-align: center;
+  color: var(--tertiary-color);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+}

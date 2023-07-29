@@ -2,6 +2,7 @@ import "./Cards.css"
 import { useContext } from "react";
 import { MdOutlineWatchLater, MdWatchLater } from "react-icons/md"
 import { VideoContext } from "../context/VideoContext";
+import { NavLink } from "react-router-dom";
 
 export const Cards = ({ video }) => {
     const { addToWatchLater, removeFromWatchLater, state: { watchLater } } = useContext(VideoContext)
@@ -17,7 +18,10 @@ export const Cards = ({ video }) => {
                     <MdWatchLater onClick={() => removeFromWatchLater(_id)} className="svg" /> :
                     <MdOutlineWatchLater onClick={() => addToWatchLater(_id)} className="svg" />}
 
-                <img src={thumbnail} alt="thumbnail" />
+                <NavLink to={`/watch/${_id}`} >
+                    <img src={thumbnail} alt="thumbnail" />
+                </NavLink>
+
                 <div className="videoDetails" >
                     <img src="https://picsum.photos/40/40" alt="roundPhoto" />
 

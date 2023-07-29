@@ -1,0 +1,69 @@
+.selectedVideoToWatch {
+  margin-top: 1rem;
+}
+
+.playvideoContainer {
+  width: 600px;
+}
+
+.playvideoContainer iframe {
+  width: 100%;
+  height: 450px;
+}
+
+.videoDetailsCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--tertiary-color);
+}
+
+.videoName {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.videoName img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.videoIcons {
+  display: flex;
+  font-size: 1.4rem;
+  gap: 0.7rem;
+}
+
+.videoPageContainer {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.videoDIv {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.videoParent {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.navlink {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.navlink p:nth-child(1) {
+  margin-top: 0;
+}
+
+.videoSvg {
+  color: var(--primary-color);
+}

@@ -32,11 +32,30 @@ export const VideoContextProvider = ({ children }) => {
         })
     }
 
+    const searchVideoByTitle =
+        state.searchValue === ""
+            ? state?.videos : state.videos.filter((video) => video?.title.toLowerCase().includes(state?.searchValue.toLowerCase()))
+
+
+
+
+    const addNotes = () => {
+        dispatch({
+            type: "ADD_NOTES",
+            payload: {
+                addNote: state.noteValue
+            }
+        });
+    };
+
 
     const value = {
         state,
+        dispatch,
         addToWatchLater,
-        removeFromWatchLater
+        removeFromWatchLater,
+        searchVideoByTitle,
+        addNotes
     }
 
 

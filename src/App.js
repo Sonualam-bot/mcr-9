@@ -7,6 +7,7 @@ import { ExplorePage } from "./pages/explore/ExplorePage";
 import { Playlists } from "./pages/playlists/Playlists";
 import { WatchLater } from "./pages/watchLater/WatchLater";
 import { CategoryWiseVideoList } from "./pages/categoryVideoList/CategoryWiseVideoList";
+import { Watch } from "./watch/Watch";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="playlists" element={<Playlists />} />
           <Route path="/watchlater" element={<WatchLater />} />
           <Route path="/catVideoList/:selectedCategory" element={<CategoryWiseVideoList />} />
+          <Route path="/watch/:watchVideoId" element={<Watch />} />
 
         </Routes>
 
