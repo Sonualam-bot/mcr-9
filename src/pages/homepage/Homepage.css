@@ -1,0 +1,15 @@
+.categoryContainer {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  padding-left: 0;
+}
+
+.categorySpecial {
+  cursor: pointer;
+}
+
+.categorySpecial > img {
+  object-fit: cover;
+}

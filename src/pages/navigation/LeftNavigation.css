@@ -1,0 +1,30 @@
+.navigationContainer {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  /* flex: 0.2; */
+  min-width: 200px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sidebarOptions {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  text-decoration: none;
+  color: var(--vacay-black);
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  border: none;
+  outline: none;
+}
+
+.sidebarOptions.active {
+  color: var(--primary-color);
+}
