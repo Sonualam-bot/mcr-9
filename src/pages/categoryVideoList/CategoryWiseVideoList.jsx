@@ -15,7 +15,7 @@ export const CategoryWiseVideoList = () => {
 
     return (
         <>
-            <div className="categorySpecial" >
+            <div className="categoryWiseVideo" >
                 <h2> {selectedCategory} </h2>
 
                 <div className="selectedCategoryContainer" >

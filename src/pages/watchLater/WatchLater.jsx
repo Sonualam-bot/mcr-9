@@ -5,10 +5,10 @@ import { Cards } from "../../cards/Cards"
 export const WatchLater = () => {
     const { state: { watchLater } } = useContext(VideoContext)
 
-    console.log(watchLater)
+
     return (
         <>
-            <div className="categorySpecial" >
+            <div className="watchLater" >
                 <h2> Watch Later </h2>
 
                 <div className="selectedCategoryContainer" >

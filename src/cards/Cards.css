@@ -7,9 +7,14 @@ p {
 .selectedCategoryVideos {
   width: 320px;
   position: relative;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 10px;
 }
-.selectedCategoryVideos img {
+.selectVideoImage {
   width: 100%;
+  height: 180px;
 }
 
 .svg {
@@ -29,6 +34,7 @@ p {
   justify-content: center;
   width: 300px;
   gap: 1rem;
+  padding-left: 5px;
 }
 
 .videoDetails > img {

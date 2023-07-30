@@ -1,0 +1,70 @@
+.playlistSpecial {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 180px;
+  height: 180px;
+  position: relative;
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.playlistCreated {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 0;
+}
+
+.playlistSpecial svg {
+  position: absolute;
+  right: 0;
+  color: var(--primary-color);
+  padding: 5px;
+  background-color: antiquewhite;
+  border-radius: 0 0 0 5px;
+}
+
+.playlistSpecial svg:hover {
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+.playlistSpecial p:nth-child(2) {
+  font-size: 1.45rem;
+  font-weight: 650;
+}
+.playlistSpecial p {
+  padding-left: 5px;
+}
+
+.playlistSpecial img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.createPlay svg {
+  font-size: 1.5rem;
+}
+.createPlay svg:hover {
+  color: var(--primary-color);
+}
+
+.createPlay {
+  position: relative;
+}
+
+.showAddModal {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+}

@@ -19,15 +19,17 @@ export const Cards = ({ video }) => {
                     <MdOutlineWatchLater onClick={() => addToWatchLater(_id)} className="svg" />}
 
                 <NavLink to={`/watch/${_id}`} >
-                    <img src={thumbnail} alt="thumbnail" />
+                    <img src={thumbnail} alt="thumbnail" className="selectVideoImage" />
                 </NavLink>
 
                 <div className="videoDetails" >
                     <img src="https://picsum.photos/40/40" alt="roundPhoto" />
 
                     <div className="detailsSpecial" >
-                        <h3> {title} </h3>
-                        <h3> {category} </h3>
+                        <NavLink to={`/watch/${_id}`} className="navlink" >
+                            <h3> {title} </h3>
+                            <h3> {category} </h3>
+                        </NavLink>
                         <div className="createrDetails">
                             <p> {views} views </p>
                             <p> {creator} </p>

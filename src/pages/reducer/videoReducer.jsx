@@ -7,7 +7,13 @@ export const initialState = {
     watchLater: [],
     searchValue: "",
     noteValue: "",
-    addNotes: []
+    createPlaylist: {
+        _id: "",
+        title: "",
+        description: ""
+    },
+    playlist: [],
+    playlistCount: 0
 }
 
 export const videoReducer = (state, action) => {
@@ -22,7 +28,61 @@ export const videoReducer = (state, action) => {
         case "NOTE":
             return { ...state, noteValue: payload.note }
         case "ADD_NOTES":
-            return { ...state, addNotes: [...state.addNotes, payload.addNote], noteValue: "" }
+            return { ...state, videos: payload.addNote, noteValue: "" }
+        case "DELETE_NOTES":
+            return { ...state, videos: payload.deleteNote }
+        case "SET_PLAYLIST_TITLE":
+            return {
+                ...state,
+                createPlaylist: {
+                    ...state.createPlaylist,
+                    title: payload.title,
+                },
+            };
+        case "SET_PLAYLIST_DESCRIPTION":
+            return {
+                ...state,
+                createPlaylist: {
+                    ...state.createPlaylist,
+                    description: payload.description,
+                },
+            };
+        case "ADD_PLAYLIST":
+            return {
+                ...state,
+                playlistCount: state.playlistCount + 1,
+                playlist: [
+                    ...state.playlist,
+                    {
+                        ...payload.playlist,
+                        _id: state.playlistCount + 1,
+                        videos: [],
+                    },
+                ],
+                createPlaylist: { title: "", description: "" },
+            };
+        case "DELETE_PLAYLIST":
+            return { ...state, playlist: payload.deletePlaylist }
+        case "ADD_VIDEO_TO_PLAYLIST":
+            return { ...state, playlist: payload.addVideoToPlaylist }
+
+        case "LOAD-STATE":
+            return { ...state, ...action.payload };
+
+
+        case "EDIT_NOTE":
+            return {
+                ...state,
+                videos: state.videos.map((video) => {
+                    if (video._id === payload.videoId) {
+                        const updatedNotes = [...video.notes];
+                        updatedNotes[payload.index] = payload.editedNote;
+                        return { ...video, notes: updatedNotes };
+                    }
+                    return video;
+                }),
+            };
+
         default:
             throw new Error(`Unknown action type ${type} `)
     }

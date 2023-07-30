@@ -8,10 +8,27 @@ import { Playlists } from "./pages/playlists/Playlists";
 import { WatchLater } from "./pages/watchLater/WatchLater";
 import { CategoryWiseVideoList } from "./pages/categoryVideoList/CategoryWiseVideoList";
 import { Watch } from "./watch/Watch";
+import { Toaster } from "react-hot-toast";
+import { SinglePlayistPage } from "./newPlaylist/SinglePlaylistPage";
 
 function App() {
   return (
     <div className="App" >
+
+      <Toaster
+
+        position="top-center"
+        reverseOrder={false}
+        containerStyle={{}}
+        toastOptions={{
+          className: '',
+          duration: 1300,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          }
+        }}
+      />
 
 
       <section className="left-section" >
@@ -26,6 +43,7 @@ function App() {
           <Route path="/watchlater" element={<WatchLater />} />
           <Route path="/catVideoList/:selectedCategory" element={<CategoryWiseVideoList />} />
           <Route path="/watch/:watchVideoId" element={<Watch />} />
+          <Route path="/singlePlaylist/:title" element={<SinglePlayistPage />} />
 
         </Routes>
 

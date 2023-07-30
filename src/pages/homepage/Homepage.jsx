@@ -2,12 +2,14 @@ import "./Homepage.css"
 import { VideoContext } from "../../context/VideoContext"
 import { useContext } from "react"
 import { NavLink } from "react-router-dom"
+import { Header } from "../../component/Header"
 
 export const Homepage = () => {
     const { state: { categories } } = useContext(VideoContext)
-    console.log(typeof categories)
+
     return (
         <>
+            {/* <Header /> */}
             <div>
                 <h1>Categories</h1>
 
