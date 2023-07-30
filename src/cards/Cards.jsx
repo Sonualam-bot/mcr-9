@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { MdOutlineWatchLater, MdWatchLater } from "react-icons/md"
 import { VideoContext } from "../context/VideoContext";
 import { NavLink } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 export const Cards = ({ video }) => {
     const { addToWatchLater, removeFromWatchLater, state: { watchLater } } = useContext(VideoContext)
@@ -15,8 +16,16 @@ export const Cards = ({ video }) => {
         <>
             <div key={_id} className="selectedCategoryVideos" >
                 {addRemove(_id) ?
-                    <MdWatchLater onClick={() => removeFromWatchLater(_id)} className="svg" /> :
-                    <MdOutlineWatchLater onClick={() => addToWatchLater(_id)} className="svg" />}
+                    <MdWatchLater onClick={() => {
+                        removeFromWatchLater(_id);
+                        toast.success("Removed From Watch later")
+
+
+                    }} className="svg" /> :
+                    <MdOutlineWatchLater onClick={() => {
+                        addToWatchLater(_id);
+                        toast.success("Added To Watch later")
+                    }} className="svg" />}
 
                 <NavLink to={`/watch/${_id}`} >
                     <img src={thumbnail} alt="thumbnail" className="selectVideoImage" />

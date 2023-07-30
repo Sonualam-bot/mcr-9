@@ -57,6 +57,10 @@
   justify-content: space-around;
 }
 
+.addedPlaylist h3 {
+  cursor: pointer;
+}
+
 /* styling the single playlist videos page */
 
 .singlePlaylistVideo {

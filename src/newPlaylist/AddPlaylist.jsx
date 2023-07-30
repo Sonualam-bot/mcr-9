@@ -76,7 +76,10 @@ export const AddPlaylist = ({ setCreatePlaylist, addPlaylist, setShowPlaylist, p
                         {playlist?.map((list) => {
                             return (
                                 <div key={list._id} className="addedPlaylist">
-                                    <h3 onClick={() => addVideoToPlaylist(list._id, video)} > {list.title} </h3>
+                                    <h3 onClick={() => {
+                                        addVideoToPlaylist(list._id, video);
+                                        toast.success("Added To Playlist")
+                                    }} > {list.title} </h3>
                                     {/* <div> */}
                                     <RxCross1 className="deleteSvg" onClick={() => {
                                         deletePlaylist(list._id);
