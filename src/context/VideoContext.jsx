@@ -36,7 +36,7 @@ export const VideoContextProvider = ({ children }) => {
 
     const searchVideoByTitle =
         state.searchValue === ""
-            ? state?.videos : state.videos.filter((video) => video?.title.toLowerCase().includes(state?.searchValue.toLowerCase()))
+            ? state?.videos : state.exploreVideos.filter((video) => video?.title.toLowerCase().includes(state?.searchValue.toLowerCase()))
 
 
 

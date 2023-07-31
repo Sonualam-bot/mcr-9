@@ -4,6 +4,7 @@ import { videos } from "../../Utils/videos";
 export const initialState = {
     categories: categories,
     videos: videos,
+    exploreVideos: videos,
     watchLater: [],
     searchValue: "",
     noteValue: "",
@@ -24,6 +25,7 @@ export const videoReducer = (state, action) => {
         case "REMOVE_FROM_WATCH_LATER":
             return { ...state, watchLater: payload.removeFromWatchLater }
         case "SEARCH":
+            console.log("SEARCH", payload)
             return { ...state, searchValue: payload.search }
         case "NOTE":
             return { ...state, noteValue: payload.note }
@@ -67,7 +69,7 @@ export const videoReducer = (state, action) => {
             return { ...state, playlist: payload.addVideoToPlaylist }
 
         case "LOAD-STATE":
-            return { ...state, ...action.payload };
+            return { ...state, ...payload };
 
 
         case "EDIT_NOTE":

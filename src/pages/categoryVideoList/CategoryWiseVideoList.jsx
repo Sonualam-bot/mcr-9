@@ -8,7 +8,7 @@ import { useParams } from "react-router"
 import { Cards } from "../../cards/Cards"
 
 export const CategoryWiseVideoList = () => {
-    const { state: { videos }, addToWatchLater } = useContext(VideoContext);
+    const { state: { videos } } = useContext(VideoContext);
     const { selectedCategory } = useParams();
 
     const showSelectedCategoryVideo = videos?.filter((video) => video?.category === selectedCategory)

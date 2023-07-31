@@ -48,9 +48,13 @@ p {
   color: var(--teritay-color);
   gap: 0.3rem;
 }
+.createrDetails p {
+  color: var(--tertiary-color);
+  padding: 2px;
+}
 
 .createrDetails p:nth-child(1) {
-  border-right: 1px solid var(--teritay-color);
+  border-right: 1px solid var(--tertiary-color);
   padding-right: 5px;
 }
 
